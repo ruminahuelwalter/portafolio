@@ -11,8 +11,9 @@
 3. Cambiar las variables de entorno
 4. Levantar la base de datos
 ```docker-compose up -d```
-5. Abrir pgADmin desde localhost:8080
-6. Loguearse
-7. Configurar el server
+5. Configurar el gitIgnore para las carpetas pgadmin y postgres
+6. Abrir pgADmin desde localhost:8080
+7. Loguearse
+8. Configurar el server
 
 ---
