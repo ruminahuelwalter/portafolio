@@ -1,9 +1,27 @@
-<p-card>
-    <p>foto-perfil works!</p>
 
-    <div class="card flex justify-content-center">
+
+<p-card >
+    <h3>Foto de perfil </h3>
+    <p-image
+        *ngIf="imagenPerfil"   
+        [src]="imagenPerfil"
+        alt="Image" 
+        width="360" 
+        [preview]="true"
+    />
+    <p-image
+    
+        *ngIf="!imagenPerfil"
+        url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwWl4ngiL0w69Hjqe9Pm5jYcmOCEBG0TQ9z__FTcE3ed3Cx1kWO32Ue-UExwj0BXYzn9Y&usqp=CAU'
+        alt="Image" 
+        width="360"
+        />
+        
+    <h4 class="mt-5">Cambiar foto de perfil</h4>
+    <div class="card flex justify-content">
         <p-toast/>
-        <p-fileUpload 
+        <p-fileUpload
+            class=""
             mode="basic" 
             chooseLabel="Seleccionar" 
             chooseIcon="pi pi-upload"
@@ -13,4 +31,10 @@
             maxFileSize="1000000" 
             (onUpload)="onUpload($event)" />
     </div>
+</p-card>
+
+<p-card class="p-2">
+    <h3>Galeria</h3>
+    <app-vista-carousel></app-vista-carousel>
+
 </p-card>
