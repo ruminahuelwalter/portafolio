@@ -10,6 +10,7 @@ import { ToastModule } from 'primeng/toast';
 import { ImageModule } from 'primeng/image';
 import { CarouselModule } from 'primeng/carousel';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { ColorPickerModule } from 'primeng/colorpicker';
 
 @NgModule({
   declarations: [],
@@ -24,8 +25,8 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
     MenuModule,
     SidebarModule,
     ToastModule,
-    ProgressSpinnerModule
-
+    ProgressSpinnerModule,
+    ColorPickerModule
   ]
 })
 export class PrimeNgModule { }

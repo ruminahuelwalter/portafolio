@@ -8,6 +8,8 @@ import { ToastModule } from 'primeng/toast';
 
 import { getDownloadURL, list, ref, Storage, uploadBytes } from '@angular/fire/storage';
 import { VistaCarouselComponent } from "../vista-carousel/vista-carousel.component";
+import { FormsModule } from '@angular/forms';
+import { MenuComponent } from "../../shared/menu/menu.component";
 
 interface UploadEvent {
   originalEvent: Event;
@@ -20,7 +22,9 @@ interface UploadEvent {
   imports: [
     FileUploadModule,
     PrimeNgModule,
-    VistaCarouselComponent
+    VistaCarouselComponent,
+    FormsModule,
+    MenuComponent
 ],
   providers: [MessageService],
   templateUrl: './foto-perfil.component.html',
@@ -29,8 +33,9 @@ interface UploadEvent {
 
 
 export class FotoPerfilComponent implements OnInit {
-
+  color: string | undefined;
   imagenPerfil: string;
+
 
   constructor(private messageService: MessageService, private storage: Storage) {
     this.imagenPerfil = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwWl4ngiL0w69Hjqe9Pm5jYcmOCEBG0TQ9z__FTcE3ed3Cx1kWO32Ue-UExwj0BXYzn9Y&usqp=CAU';
