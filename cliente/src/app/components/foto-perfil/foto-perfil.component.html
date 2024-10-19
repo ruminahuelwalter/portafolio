@@ -1,47 +1,41 @@
 <app-menu class="p-2"></app-menu>
 
-<p-card >
-    <p-image
-        *ngIf="imagenPerfil"   
-        [src]="imagenPerfil"
-        alt="Image" 
-        width="360" 
-        [preview]="true"
-    />
+      <div class="card flex relative w-90 h-90">
+        <div class=" grid min-h-[140px] w-full place-items-center rounded-lg p-6 lg:overflow-visible">
+          <img
+            class="object-cover object-center rounded-full h-96 w-96"
+            [src]="imagenPerfil"
+            alt="Img perfil"
+          />
 
+        </div>
+        <button (click)="toggleDropdown()"
+          class="absolute top-2 right-2 bg-blue-500 text-white p-2 rounded-full focus:outline-none pep">
+          <i class="pi pi-ellipsis-v" style="font-size: 2rem"></i>
+        </button>
 
-    <p-image
-    
-        *ngIf="!imagenPerfil"
-        url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwWl4ngiL0w69Hjqe9Pm5jYcmOCEBG0TQ9z__FTcE3ed3Cx1kWO32Ue-UExwj0BXYzn9Y&usqp=CAU'
-        alt="Image" 
-        width="360"
-        />
-        
+       <!--  <img [src]="imagenPerfil" alt="Imagen" class="object-cover object-center rounded-full h-96 w-96"> -->
 
-    <h4 class="mt-5">Cambiar foto de perfil</h4>
-    <div class="card flex justify-content">
-        <p-toast/>
-        <p-fileUpload
-            class=""
-            mode="basic" 
-            chooseLabel="Seleccionar" 
-            chooseIcon="pi pi-upload"
-            name="demo[]" 
-            url="https://www.primefaces.org/cdn/api/upload.php" 
-            accept="image/*" 
-            maxFileSize="1000000" 
-            (onUpload)="onUpload($event)" />
+      
+        <!-- Desplegable -->
+        <div *ngIf="isDropdownOpen" class="absolute top-10 right-2 w-48 bg-white shadow-lg rounded-lg p-4">
+          <ul>
+            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Opción 1</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Opción 2</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Opción 3</a></li>
+          </ul>
+        </div>
+      </div>
+
+    <div class="">
+
+      <h4 class="mt-5 text-2xl">Cambiar foto de perfil</h4>
+      <div class="card flex justify-content">
+     
+      <h3>Galeria</h3>
+      <app-vista-carousel></app-vista-carousel>
+      </div>
+
     </div>
-</p-card>
 
-<p-card class="p-2">
-    <h3>Galeria</h3>
-    <app-vista-carousel></app-vista-carousel>
-
-</p-card>
-
-<p-card>
-    <p-colorPicker [(ngModel)]="color" />
-</p-card>
 

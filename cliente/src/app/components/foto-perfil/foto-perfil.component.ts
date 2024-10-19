@@ -1,15 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { PrimeNgModule } from '../../prime-ng/prime-ng.module';
-import { MessageService } from 'primeng/api';
 
-
-import { FileUploadEvent, FileUploadModule } from 'primeng/fileupload';
-import { ToastModule } from 'primeng/toast';
 
 import { getDownloadURL, list, ref, Storage, uploadBytes } from '@angular/fire/storage';
 import { VistaCarouselComponent } from "../vista-carousel/vista-carousel.component";
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from "../../shared/menu/menu.component";
+import { CommonModule } from '@angular/common';
 
 interface UploadEvent {
   originalEvent: Event;
@@ -20,32 +16,36 @@ interface UploadEvent {
   selector: 'app-foto-perfil',
   standalone: true,
   imports: [
-    FileUploadModule,
-    PrimeNgModule,
+
     VistaCarouselComponent,
     FormsModule,
-    MenuComponent
+    MenuComponent,
+    CommonModule
 ],
-  providers: [MessageService],
+  providers: [],
   templateUrl: './foto-perfil.component.html',
   styleUrl: './foto-perfil.component.css'
 })
 
 
 export class FotoPerfilComponent implements OnInit {
-  color: string | undefined;
+isDropdownOpen: any;
+toggleDropdown() {
+throw new Error('Method not implemented.');
+}
+
   imagenPerfil: string;
 
-
-  constructor(private messageService: MessageService, private storage: Storage) {
+  constructor( private storage: Storage ) {
     this.imagenPerfil = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwWl4ngiL0w69Hjqe9Pm5jYcmOCEBG0TQ9z__FTcE3ed3Cx1kWO32Ue-UExwj0BXYzn9Y&usqp=CAU';
   }
   
+
   ngOnInit(): void {
     this.getImagen()
   }
  
-  onUpload($event: FileUploadEvent) {
+  onUpload($event: any) {
     // const file= $event.target.files[0];
     
     console.log('event: ' , $event)
@@ -60,7 +60,7 @@ export class FotoPerfilComponent implements OnInit {
       })
       .catch( error => console.log(error));
     }
-    this.messageService.add({ severity: 'success', summary: 'Exito', detail: 'Imagen subida correctamente' });
+    
   }
 
   getImagen() {
@@ -69,9 +69,7 @@ export class FotoPerfilComponent implements OnInit {
       console.log(response);
       const url = await getDownloadURL(response.items[0])
       console.log(url)
-     
         this.imagenPerfil = url;
-      
       })
       .catch(error => console.log(error));
   }
