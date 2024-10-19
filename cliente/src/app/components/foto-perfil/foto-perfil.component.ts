@@ -29,10 +29,10 @@ interface UploadEvent {
 
 
 export class FotoPerfilComponent implements OnInit {
-isDropdownOpen: any;
-toggleDropdown() {
-throw new Error('Method not implemented.');
-}
+  isDropdownOpen: any;
+  toggleDropdown() {
+    this.isDropdownOpen = true;
+  }
 
   imagenPerfil: string;
 
