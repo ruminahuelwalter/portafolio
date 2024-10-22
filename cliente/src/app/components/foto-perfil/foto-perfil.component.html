@@ -34,20 +34,26 @@
       [src]="imagenPerfil"
       alt="Img perfil"
   />
-  <button  (click)="toggleDropdown()"
+  <button type="input"  (click)="onUpload($event)"
     class="shadow-lg shadow-indigo-500/50 ml-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-2 self-end">
     <i class="pi pi-ellipsis-v" style="font-size: 1rem"></i>
   </button>
 
 
-  <div *ngIf="isDropdownOpen" class="relative self-end w-48 bg-white shadow-lg rounded-lg p-4">
+  <!-- <button  (click)="toggleDropdown()"
+    class="shadow-lg shadow-indigo-500/50 ml-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-2 self-end">
+    <i class="pi pi-ellipsis-v" style="font-size: 1rem"></i>
+  </button> -->
+
+
+ <!--  <div *ngIf="isDropdownOpen" class="relative self-end w-48 bg-white shadow-lg rounded-lg p-4">
           <ul>
             <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Cambiar foto de perfil </a></li>
             <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Opción 2</a></li>
             <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Opción 3</a></li>
           </ul>
         </div>
-
+ -->
 </div>
 
 
