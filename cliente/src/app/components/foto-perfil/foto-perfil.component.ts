@@ -7,11 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { MenuComponent } from "../../shared/menu/menu.component";
 import { CommonModule } from '@angular/common';
 
-interface UploadEvent {
-  originalEvent: Event;
-  files: File[];
-}
-
 @Component({
   selector: 'app-foto-perfil',
   standalone: true,
