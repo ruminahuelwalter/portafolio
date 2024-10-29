@@ -1,4 +1,16 @@
-.pep {
- background-color: rgb(88, 88, 233)
+
+
+img {
+    /* Efecto midudev*/
+    filter: drop-shadow(
+        0 0 10px rgba(0, 0, 0, .8)
+    )
 }
-       
+
+.btn {
+    position: absolute;
+    bottom: 100px; /* Ajusta la posición vertical del botón */
+    right: 90px;  /* Posiciona el botón a la derecha de la imagen */
+    
+
+  }

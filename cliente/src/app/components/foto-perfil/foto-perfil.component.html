@@ -1,75 +1,33 @@
-<app-menu class="p-2"></app-menu>
-<!-- 
-      <div class="card flex relative w-90 h-90">
-        <div class=" grid min-h-[140px] w-full place-items-center rounded-lg p-6 lg:overflow-visible">
-          <img
-            class="object-cover object-center rounded-full h-96 w-96"
-            [src]="imagenPerfil"
-            alt="Img perfil"
-          />
+ <div 
+  [style.position]="position"
+  [style.width]="size"
+  [style.height]="size"
+  [style.backgroundColor]="backgroundColor"
+  [style.transform]="'translate(' + xOffset1 + ', ' + yOffset1 + ')'"
 
-        </div>
-        <button (onClick)="toggleDropdown()"
-          class="absolute top-2 right-2 bg-purple-600 hover:bg-purple-700 text-white p-2 rounded-full focus:outline-none ">
-          <i class="pi pi-ellipsis-v" style="font-size: 1rem"></i>
-        </button>
- -->
-       <!--  <img [src]="imagenPerfil" alt="Imagen" class="object-cover object-center rounded-full h-96 w-96"> -->
-      
-      
-        <!-- Desplegable -->
-        <!-- <div *ngIf="isDropdownOpen" class="absolute top-10 right-2 w-48 bg-white shadow-lg rounded-lg p-4">
-          <ul>
-            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Opción 1</a></li>
-            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Opción 2</a></li>
-            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Opción 3</a></li>
-          </ul>
-        </div>
-      </div>
- -->
+  
+  >
 
- <div class="flex items-center min-h-[140px] w-full rounded-lg p-6 lg:overflow-visible">
   <img
       class="object-cover object-center rounded-full h-96 w-96"
+      [style.transform]="'translate(' + xOffset + ', ' + yOffset + ')'"
       [src]="imagenPerfil"
       alt="Img perfil"
+      
   />
-  <button type="input"  (click)="onUpload($event)"
-    class="shadow-lg shadow-indigo-500/50 ml-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-2 self-end">
-    <i class="pi pi-ellipsis-v" style="font-size: 1rem"></i>
-  </button>
 
+  <input
+    type="file"
+    #fileInput
+    (change)="onUpload($event)"
+    style="display: none"
+  />
 
-  <!-- <button  (click)="toggleDropdown()"
-    class="shadow-lg shadow-indigo-500/50 ml-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-2 self-end">
-    <i class="pi pi-ellipsis-v" style="font-size: 1rem"></i>
-  </button> -->
-
-
- <!--  <div *ngIf="isDropdownOpen" class="relative self-end w-48 bg-white shadow-lg rounded-lg p-4">
-          <ul>
-            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Cambiar foto de perfil </a></li>
-            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Opción 2</a></li>
-            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Opción 3</a></li>
-          </ul>
-        </div>
- -->
-
+  <button (click)="fileInput.click()"
+    class="shadow-lg shadow-indigo-500/50 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-3 btn">
+    <i class="pi pi-image" style="font-size: 2rem"></i>
+    <i class="fa-regular fa-pen"></i>
+    </button>
 
 </div>
-
-
-
-
-
-    <div class="">
-
-      <h4 class="mt-5 text-2xl">Cambiar foto de perfil</h4>
-      <div class="card flex justify-content">
-     
-      <h3>Galeria</h3>
-      <app-vista-carousel></app-vista-carousel>
-      </div>
-
-    </div>
 
