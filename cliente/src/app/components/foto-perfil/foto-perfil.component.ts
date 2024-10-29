@@ -51,9 +51,11 @@ export class FotoPerfilComponent implements OnInit {
   }
  
   onUpload($event: any) {
-    const file = $event.files[0];
+    const file = $event.target.files[0];
+    console.log(file)
     if (file) {
       const imgRef = ref(this.storage, `imagesPerfil/perfil`);
+      console.log(imgRef)
       uploadBytes(imgRef, file).then( response =>{
         this.getImagen()
       })
