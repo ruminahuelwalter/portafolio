@@ -7,15 +7,22 @@ import { FormsModule } from '@angular/forms';
 import { MenuComponent } from "../../shared/menu/menu.component";
 import { CommonModule } from '@angular/common';
 
+import { ColorSketchModule } from 'ngx-color/sketch';
+import { ColorSwatchesModule } from 'ngx-color/swatches';
+import { ColorEvent } from 'ngx-color';
+import { ColorPickerCardComponent } from "../color-picker-card/color-picker-card.component";
+
 @Component({
   selector: 'app-foto-perfil',
   standalone: true,
   imports: [
-
     VistaCarouselComponent,
     FormsModule,
     MenuComponent,
-    CommonModule
+    CommonModule,
+    ColorSketchModule,
+    ColorSwatchesModule,
+    ColorPickerCardComponent
 ],
   providers: [],
   templateUrl: './foto-perfil.component.html',
@@ -24,6 +31,7 @@ import { CommonModule } from '@angular/common';
 
 
 export class FotoPerfilComponent implements OnInit {
+
  
   imagenPerfil: string;
   
@@ -52,11 +60,10 @@ export class FotoPerfilComponent implements OnInit {
  
   onUpload($event: any) {
     const file = $event.target.files[0];
-    console.log(file)
     if (file) {
       const imgRef = ref(this.storage, `imagesPerfil/perfil`);
       console.log(imgRef)
-      uploadBytes(imgRef, file).then( response =>{
+      uploadBytes(imgRef, file).then( () =>{
         this.getImagen()
       })
       .catch( error => console.log(error));
@@ -71,4 +78,27 @@ export class FotoPerfilComponent implements OnInit {
     })
       .catch(error => console.log(error));
   }
+
+
+  handleChange($event: ColorEvent) {
+    console.log($event.color);
+    // color = {
+    //   hex: '#333',
+    //   rgb: {
+    //     r: 51,
+    //     g: 51,
+    //     b: 51,
+    //     a: 1,
+    //   },
+    //   hsl: {
+    //     h: 0,
+    //     s: 0,
+    //     l: .20,
+    //     a: 1,
+    //   },
+    // }
+  }
+  
 }
+
+
