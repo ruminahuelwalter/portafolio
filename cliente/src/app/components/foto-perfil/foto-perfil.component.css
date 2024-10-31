@@ -9,7 +9,14 @@ img {
 
 .btn {
     position: absolute;
-    bottom: 100px; /* Ajusta la posición vertical del botón */
-    right: 90px;  /* Posiciona el botón a la derecha de la imagen */
+    bottom: 6rem; /* Ajusta la posición vertical del botón */
+    right: 2rem;  /* Posiciona el botón a la derecha de la imagen */
     
   }
+
+.picker{
+    position: absolute;
+    bottom: 30rem; /* Ajusta la posición vertical del botón */
+    right: 2rem;  /* Posiciona el botón a la derecha de la imagen */
+    
+}
