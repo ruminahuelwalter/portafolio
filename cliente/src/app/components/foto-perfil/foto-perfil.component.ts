@@ -40,7 +40,6 @@ export class FotoPerfilComponent implements OnInit {
   yOffset1 = '80px';
 
 
-
   xOffset = '100px';
   yOffset = '80px';
   @Input() 
@@ -48,13 +47,14 @@ export class FotoPerfilComponent implements OnInit {
   @Input() 
     size: string = '600px';
   @Input() 
-    backgroundColor: string = 'crimson';
+    backgroundColor: string = '';
 
   constructor( private storage: Storage ) {
     this.imagenPerfil = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwWl4ngiL0w69Hjqe9Pm5jYcmOCEBG0TQ9z__FTcE3ed3Cx1kWO32Ue-UExwj0BXYzn9Y&usqp=CAU';
   }
   
   ngOnInit(): void {
+
     this.getImagen()
   }
  
@@ -79,24 +79,9 @@ export class FotoPerfilComponent implements OnInit {
       .catch(error => console.log(error));
   }
 
-
-  handleChange($event: ColorEvent) {
-    console.log($event.color);
-    // color = {
-    //   hex: '#333',
-    //   rgb: {
-    //     r: 51,
-    //     g: 51,
-    //     b: 51,
-    //     a: 1,
-    //   },
-    //   hsl: {
-    //     h: 0,
-    //     s: 0,
-    //     l: .20,
-    //     a: 1,
-    //   },
-    // }
+  @Input()
+  onColorChange($event: string) {
+    this.backgroundColor = $event;
   }
   
 }

@@ -37,15 +37,21 @@ export class ColorPickerCardComponent {
   }
 
   confirmColor() {
-    this.colorSelected.emit(this.selectedColor);
+    this.colorSelected.emit(this.primaryColor);
+    
+    console.log("color clic: ", this.primaryColor )
+    
     this.closePicker();
   }
 
 
-  
   changeComplete($event: ColorEvent): void {
     this.state = $event.color.hsl;
     this.primaryColor = $event.color.hex;
+    this.selectedColor = $event.color.hex;
     console.log('changeComplete', $event);
+    console.log('Color: ', this.primaryColor);
+   
+
   }
 }

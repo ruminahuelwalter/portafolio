@@ -7,7 +7,7 @@
     
   >
   <div class="picker">
-    <app-color-picker-card></app-color-picker-card>
+    <app-color-picker-card (colorSelected)="onColorChange($event)"></app-color-picker-card>
   </div>
 
   <img
