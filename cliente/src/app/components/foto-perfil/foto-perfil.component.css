@@ -14,7 +14,7 @@ img {
     
   }
 
-.picker{
+.ubicacion{
     position: absolute;
     bottom: 30rem; /* Ajusta la posición vertical del botón */
     right: 2rem;  /* Posiciona el botón a la derecha de la imagen */
