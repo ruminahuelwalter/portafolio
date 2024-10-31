@@ -16,7 +16,6 @@ import { ColorSwatchesModule } from 'ngx-color/swatches';
 export class ColorPickerCardComponent {
   @Output() colorSelected = new EventEmitter<string>();
   isOpen = false;
-  selectedColor = '#ffffff';
 
   
   title = 'app';
@@ -39,8 +38,6 @@ export class ColorPickerCardComponent {
   confirmColor() {
     this.colorSelected.emit(this.primaryColor);
     
-    console.log("color clic: ", this.primaryColor )
-    
     this.closePicker();
   }
 
@@ -48,9 +45,7 @@ export class ColorPickerCardComponent {
   changeComplete($event: ColorEvent): void {
     this.state = $event.color.hsl;
     this.primaryColor = $event.color.hex;
-    this.selectedColor = $event.color.hex;
-    console.log('changeComplete', $event);
-    console.log('Color: ', this.primaryColor);
+
    
 
   }
