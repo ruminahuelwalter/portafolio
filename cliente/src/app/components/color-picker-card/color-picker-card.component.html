@@ -1,4 +1,4 @@
-
+<div style="position: relative; display: inline-block;">
 <button type="button" 
     class=" shadow-lg shadow-indigo-500/50 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-3 btn"
     (click)="openPicker()">
@@ -6,7 +6,9 @@
 </button>
   <!-- <button (click)="openPicker()">Seleccionar color</button> -->
 
-<div class="color-picker-card m-1 max-w-sm pr-1 pl-7 bg-white border border-gray-200 rounded-lg shadow " *ngIf="isOpen">
+<div class="color-picker-card m-1 max-w-sm pr-1 pl-7 bg-white border border-gray-200 rounded-lg shadow " *ngIf="isOpen"
+    style="position: absolute; top: 100%; left: 0; z-index: 10;"
+    >
     <h3 class="font-medium rounded-lg text-base px-5 py-2.5 text-center me-2">Seleccione un color</h3>
     <color-swatches class="" [color]="state" (onChangeComplete)="changeComplete($event)"></color-swatches>
     <div class="botonera pt-7 pb-2">
@@ -23,7 +25,8 @@
          dark:focus:ring-blue-800 
          font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" (click)="closePicker()">Cancelar</button>
 
-        
 
     </div>
+</div>
+
 </div>
