@@ -19,7 +19,8 @@ export class ColorPickerCardComponent {
 
   
   title = 'app';
-  primaryColor = '#194D33';
+  primaryColor = '';
+  resetColor = '#194D33'; // Color definido anteriormente
   state = {
     h: 150,
     s: 0.50,
@@ -29,6 +30,7 @@ export class ColorPickerCardComponent {
 
   openPicker() {
     this.isOpen = true;
+
   }
 
   closePicker() {
@@ -37,16 +39,18 @@ export class ColorPickerCardComponent {
 
   confirmColor() {
     this.colorSelected.emit(this.primaryColor);
-    
     this.closePicker();
   }
 
-
+  cancelColorSelection() {
+    this.colorSelected.emit(this.resetColor);
+    this.closePicker();
+  }
+  
   changeComplete($event: ColorEvent): void {
     this.state = $event.color.hsl;
     this.primaryColor = $event.color.hex;
-
-   
+    this.colorSelected.emit(this.primaryColor);
 
   }
 }

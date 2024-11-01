@@ -47,7 +47,7 @@ export class FotoPerfilComponent implements OnInit {
   @Input() 
     size: string = '600px';
   @Input() 
-    backgroundColor: string = '';
+    backgroundColor: string = '#194D33';
 
   constructor( private storage: Storage ) {
     this.imagenPerfil = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwWl4ngiL0w69Hjqe9Pm5jYcmOCEBG0TQ9z__FTcE3ed3Cx1kWO32Ue-UExwj0BXYzn9Y&usqp=CAU';
@@ -82,6 +82,7 @@ export class FotoPerfilComponent implements OnInit {
   @Input()
   onColorChange($event: string) {
     this.backgroundColor = $event;
+    console.log('llego: ', $event)
   }
   
 }
