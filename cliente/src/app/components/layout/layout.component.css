@@ -3,8 +3,10 @@
     position: center;
 }
 
-/* .section {
-    align-content: center;
-    display: block;
-} */
 
+.ubicacion{
+    position: absolute;
+    top: 2rem; /* Ajusta la posición vertical del botón */
+    right: 2rem;  /* Posiciona el botón a la derecha de la imagen */
+    
+}

@@ -11,8 +11,7 @@
             bg-white border 
             border-gray-200 
             rounded-lg 
-            shadow 
-            picker" 
+            shadow " 
             *ngIf="isOpen">
         <h3 class="font-medium rounded-lg text-base px-5 py-2.5 text-center me-2">Seleccione un color</h3>
         <color-swatches class="" [color]="state" (onChangeComplete)="changeComplete($event)"></color-swatches>
