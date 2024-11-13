@@ -4,7 +4,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { MenuItemContent, MenuModule } from 'primeng/menu';
 import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
-
+import { AlbumComponent } from '../pages/album/album.component';
 
 @NgModule({
   declarations: [],
@@ -13,9 +13,8 @@ import { ButtonModule } from 'primeng/button';
     SidebarModule,
     MenuModule,
     MenubarModule,
-    ButtonModule,
-    
-    
+    ButtonModule
+   
   ]
 })
 export class PrimeNgModule { }

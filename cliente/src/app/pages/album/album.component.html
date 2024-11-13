@@ -1,0 +1,10 @@
+<mat-grid-list [cols]="cols" rowHeight="1:1"
+>
+<mat-grid-tile 
+
+    *ngFor="let tile of tiles">
+    <app-img  ></app-img>
+    
+</mat-grid-tile>
+    </mat-grid-list>
+    <app-slider (colsChange)="updateCols($event)"></app-slider>

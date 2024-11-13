@@ -4,7 +4,6 @@ import { PrimeNGConfig } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { PrimeNgModule } from './prime-ng/prime-ng.module';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
