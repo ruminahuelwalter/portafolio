@@ -20,7 +20,7 @@ export class ColorPickerCardComponent {
   
   title = 'app';
   primaryColor = '';
-  resetColor = '#194D33'; // Color definido anteriormente
+  resetColor = '#fbc02d'; // Color definido anteriormente
   state = {
     h: 150,
     s: 0.50,
@@ -29,7 +29,7 @@ export class ColorPickerCardComponent {
   }
 
   openPicker() {
-    this.isOpen = true;
+    this.isOpen = !this.isOpen;
 
   }
 

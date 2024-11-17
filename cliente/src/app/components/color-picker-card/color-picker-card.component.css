@@ -1,6 +1,4 @@
 .color-picker-card {
-    border: 1px solid #050202;
-    width: 20rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 10;
     width: 36rem;
@@ -19,5 +17,10 @@
     display: flex;
     align-items: center;    
     justify-content: center;
+}
+
+.card {
+  position: relative; 
+  display: inline-block;
 }
   

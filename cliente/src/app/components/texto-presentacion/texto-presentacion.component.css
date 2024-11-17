@@ -1,0 +1,35 @@
+.texto-card {
+   
+    width: 90rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    align-items: center;    
+    justify-content: center;
+    padding: 1.5rem;
+
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    transform: translateX(-80%)
+    
+  }
+
+
+.botonera{
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+}
+  
+
+.text-format {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-width: 100%; /* definir un ancho fijo, como max-width: 300px; */
+}
+
+.card {
+    position: relative; 
+    display: inline-block;
+}

@@ -1,18 +1,12 @@
-<div style="position: relative; display: inline-block;">
+<div class="card">
     <button type="button" 
         class="shadow-indigo-500/50 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-3 btn"
         (click)="openPicker()">
         <i class="pi pi-palette" style="font-size: 2rem"></i>
     </button>
-      <!-- <button (click)="openPicker()">Seleccionar color</button> -->
 
-    <div class="color-picker-card 
-            m-1 max-w-sm pr-1 pl-7 
-            bg-white border 
-            border-gray-200 
-            rounded-lg 
-            shadow " 
-            *ngIf="isOpen">
+
+    <div class="color-picker-card m-1 max-w-sm pr-1 pl-7 bg-white border border-gray-200 rounded-lg shadow" *ngIf="isOpen">
         <h3 class="font-medium rounded-lg text-base px-5 py-2.5 text-center me-2">Seleccione un color</h3>
         <color-swatches class="" [color]="state" (onChangeComplete)="changeComplete($event)"></color-swatches>
 
@@ -20,7 +14,7 @@
             <button type="button" 
                 class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
                 focus:ring-4 focus:outline-none focus:ring-blue-300
-                dark:focus:ring-blue-800 font-medium rounded-lg 
+                dark:focus:ring-blue-100 font-medium rounded-lg 
                 text-sm px-5 py-2.5 text-center me-2 mb-2"(click)="confirmColor()">
                 Aceptar
             </button>
@@ -29,7 +23,7 @@
                 class="
                 text-white bg-gradient-to-br from-purple-800 to-blue-400 
                 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300
-                 dark:focus:ring-blue-800 
+                 dark:focus:ring-blue-100 
                 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" (click)="cancelColorSelection()">
                 Cancelar
             </button>

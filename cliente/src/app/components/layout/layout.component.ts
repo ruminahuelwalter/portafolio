@@ -14,15 +14,16 @@ import { TextoPresentacionComponent } from "../texto-presentacion/texto-presenta
 export class LayoutComponent {
 
   @Input() 
-  backgroundColor: string = '#194D33';
-@Input()
-onColorChange($event: string) {
-  this.backgroundColor = $event;
-  console.log('llego: ', $event)
-}
-  xOffset = '100px';
+  backgroundColor: string = '#ffd54f';
+  @Input()
+  onColorChange($event: string) {
+    this.backgroundColor = $event;
+    console.log('llego: ', $event)
+  }
+
+/*   xOffset = '100px';
   yOffset = '80px';
   
   position: string = 'center';
-
+ */
 }

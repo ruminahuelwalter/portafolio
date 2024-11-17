@@ -1,18 +1,14 @@
  <div 
-
-  [style.width]="size"
-  [style.height]="size"
   [style.backgroundColor]="backgroundColor"
-  [style.transform]="'translate(' + xOffset1 + ', ' + yOffset1 + ')'"
-    
+  class=" bg-white   border-slate-200 rounded-lg pt-8 pb-8 p-5 content"
   >
-  <div class="ubicacion">
+
+  <div class="btn-color-picker-ubicacion">
     <app-color-picker-card (colorSelected)="onColorChange($event)"></app-color-picker-card>
   </div>
 
   <img
       class="object-cover object-center rounded-full h-96 w-96"
-      [style.transform]="'translate(' + xOffset + ', ' + yOffset + ')'"
       [src]="imagenPerfil"
       alt="Img perfil"
   />
@@ -24,7 +20,7 @@
     style="display: none"
   />
   <button (click)="fileInput.click()"
-    class=" shadow-indigo-500/50 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-3 btn">
+    class=" shadow-indigo-500/50 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-3 btn-img">
     <i class="pi pi-image" style="font-size: 2rem"></i>
     </button>
     

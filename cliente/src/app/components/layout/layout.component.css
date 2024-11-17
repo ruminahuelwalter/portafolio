@@ -1,7 +1,14 @@
 
-.ubicacion{
+.flex-container {
+    display: flex;
+    align-items: center; 
+    gap: 2rem; /* Espacio entre la imagen y la descripción */
+    padding: 2rem;
+  }
+  
+  .ubicacion-btn-color-picker{
     position: absolute;
-    top: 2rem; /* Ajusta la posición vertical del botón */
-    right: 2rem;  /* Posiciona el botón a la derecha de la imagen */
+    top: 2rem; 
+    right: 2rem;  
     
 }

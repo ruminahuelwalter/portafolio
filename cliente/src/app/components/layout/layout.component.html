@@ -1,16 +1,15 @@
-<p>layout works!</p>
-
 <div
     [style.backgroundColor]="backgroundColor"
 >
-    <section>
-        <div class="ubicacion">
+    <section class="flex-container">
+        <div class="ubicacion-btn-color-picker">
             <app-color-picker-card (colorSelected)="onColorChange($event)"></app-color-picker-card>
         </div>
-        
-        <app-foto-perfil pb-10></app-foto-perfil>
-        <app-texto-presentacion class="pt-10"></app-texto-presentacion>
-        
-    </section>
+    
+            <app-foto-perfil></app-foto-perfil>
+            <app-texto-presentacion></app-texto-presentacion>
+ 
+    </section> 
+    
 </div>
 
