@@ -40,7 +40,7 @@ export class TextoPresentacionComponent {
     console.log('Título guardado:', this.title);
     console.log('Descripción guardada:', this.description);
     
-    // enviar title y description al servidor
+    // Enviar title y description al servidor
   }
   
   
