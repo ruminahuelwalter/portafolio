@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input,Output, EventEmitter } from '@angular/core';
 import { FotoPerfilComponent } from "../../components/foto-perfil/foto-perfil.component";
 
 @Component({
@@ -11,5 +11,10 @@ import { FotoPerfilComponent } from "../../components/foto-perfil/foto-perfil.co
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
-  
+  @Output() colsChange = new EventEmitter<number>();
+
+  // Simula el cambio de valor. Por ejemplo, puede ser el valor de un slider
+  onSliderChange(value: number) {
+    this.colsChange.emit(value); // Emite el nuevo valor de columnas
+  }
 }

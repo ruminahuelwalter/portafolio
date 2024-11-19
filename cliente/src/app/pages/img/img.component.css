@@ -1,0 +1,52 @@
+
+  .example-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para llenar el contenedor */
+  }
+  .example-header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  /* Inicialmente oculta el contenido de hover */
+.hover-card .hover-content {
+    display: none;
+  }
+  
+  /* Muestra el contenido de hover cuando se pasa el cursor sobre mat-card */
+  .hover-card:hover .hover-content {
+    display: flex; /* O usa block, seg
+    ún el diseño deseado */
+   
+}
+.example-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  img[mat-card-image] {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    color: white; /* Color de texto blanco para mejor visibilidad */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .example-card:hover .hover-content {
+    opacity: 1;
+  }

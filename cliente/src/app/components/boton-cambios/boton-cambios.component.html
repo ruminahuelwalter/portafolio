@@ -1,0 +1,27 @@
+<div class="container" style="position: relative; display: inline-block;">
+    <button type="button" 
+            class="shadow-indigo-500/50 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-3 btn"
+            (click)="isOpen = !isOpen">
+            <i class="pi pi-arrow-right-arrow-left" style="font-size: 2rem"></i>
+        </button>
+
+
+
+<div *ngIf="isOpen" class="botonera">
+    <button type="button" 
+  class="aceptar text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
+  focus:ring-4 focus:outline-none focus:ring-blue-300
+  dark:focus:ring-blue-800 font-medium rounded-lg 
+  text-sm px-5 py-2.5 text-center me-2 mb-2" (click)="confirmValue()">Aceptar</button>
+  
+  
+  
+  <button type="button" 
+  class="cancelar
+  text-white bg-gradient-to-br from-purple-800 to-blue-400 
+  hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300
+   dark:focus:ring-blue-800 
+  font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" (click)="cancelValueSelection()">  Cancelar</button> 
+
+  
+</div>

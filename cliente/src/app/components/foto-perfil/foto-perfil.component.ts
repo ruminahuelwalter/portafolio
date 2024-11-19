@@ -1,6 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-
 import { getDownloadURL, list, ref, Storage, uploadBytes } from '@angular/fire/storage';
 import { VistaCarouselComponent } from "../vista-carousel/vista-carousel.component";
 import { FormsModule } from '@angular/forms';
