@@ -6,7 +6,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getStorage, provideStorage } from '@angular/fire/storage';
-import { environment } from './environments/environment.development';
+import { environment } from './environments/enviroment.development';  
 
 export const appConfig: ApplicationConfig = {
   providers: [

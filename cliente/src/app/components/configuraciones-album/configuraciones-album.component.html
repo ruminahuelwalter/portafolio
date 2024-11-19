@@ -1,0 +1,17 @@
+<button type="button" 
+        class="shadow-indigo-500/50 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-3 btn"
+        (click)="openPicker()">
+        <i class="pi pi-cog" style="font-size: 2rem"></i>
+    </button>
+<div *ngIf="isOpen">
+    <app-color-picker-card (colorSelected)="onColorChange($event)"></app-color-picker-card>    
+    <app-slider (colsChange)="updateCols($event)"></app-slider>
+    <app-mover-img></app-mover-img>
+</div>
+<app-ordenar-album (titleChange)="onTitleChange($event)"></app-ordenar-album>
+<div *ngIf="titles[0].vista==='carusel'">
+<app-vista-carousel></app-vista-carousel>
+</div>
+<div *ngIf="titles[0].vista==='gril'">
+<app-album (clickImg)="onImageClicked($event)"[backgroundColor]="backgroundColor"[titles]="titles" [cols]="cols"></app-album>
+</div>

@@ -1,0 +1,12 @@
+
+    
+    <div [style.backgroundColor]="backgroundColor">
+      <mat-grid-list class="container" [cols]="cols" rowHeight="1:1"
+      [style.background]="backgroundColor"
+      >
+        <mat-grid-tile *ngFor="let tile of titles; trackBy: trackByTile">
+          <app-img  (clickImg)="onImageClicked($event)" [titleData]="tile"></app-img>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  
