@@ -10,7 +10,6 @@
 </div>
 <app-ordenar-album (titleChange)="onTitleChange($event)"></app-ordenar-album>
 <div *ngIf="titles[0].vista==='carusel'">
-<app-vista-carousel></app-vista-carousel>
 </div>
 <div *ngIf="titles[0].vista==='gril'">
 <app-album (clickImg)="onImageClicked($event)"[backgroundColor]="backgroundColor"[titles]="titles" [cols]="cols"></app-album>

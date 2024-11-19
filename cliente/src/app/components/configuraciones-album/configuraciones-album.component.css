@@ -4,7 +4,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    z-index: 1; /* Asegúrate de que esté encima de otros elementos */
+    z-index: 1; /* tiene que estar encima de otros elementos */
   }
   app-slider {
     position: absolute;

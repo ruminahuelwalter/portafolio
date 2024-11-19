@@ -6,7 +6,7 @@ import {MatCardModule} from '@angular/material/card'
 @Component({
   selector: 'app-slider',
   standalone: true,
-  imports: [FormsModule,MatSliderModule, MatCardModule,NgIf],
+  imports: [FormsModule, MatSliderModule, MatCardModule,NgIf],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.css'
 })

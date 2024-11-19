@@ -7,7 +7,6 @@ import { ColorPickerCardComponent } from '../color-picker-card/color-picker-card
 import { SliderComponent } from '../../pages/slider/slider.component';
 import { AlbumComponent } from '../../pages/album/album.component';//vista grild
 import { OrdenarAlbumComponent } from '../ordenar-album/ordenar-album.component';
-import { VistaCarouselComponent } from '../vista-carousel/vista-carousel.component';
 import { MoverImgComponent } from '../mover-img/mover-img.component';
 import { Image } from '../../models/image';
 
@@ -15,9 +14,14 @@ import { Image } from '../../models/image';
 @Component({
   selector: 'app-configuraciones-album',
   standalone: true,
-  imports: [ColorPickerCardComponent,ColorSwatchesModule,AlbumComponent,
-            SliderComponent,NgIf,OrdenarAlbumComponent,VistaCarouselComponent,  
-            MoverImgComponent],
+  imports: [
+    ColorPickerCardComponent,
+    ColorSwatchesModule,
+    AlbumComponent,
+    SliderComponent,
+    NgIf,
+    OrdenarAlbumComponent,  
+    MoverImgComponent],
   templateUrl: './configuraciones-album.component.html',
   styleUrl: './configuraciones-album.component.css'
 })
