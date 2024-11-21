@@ -4,49 +4,66 @@
         (click)="isOpen = !isOpen">
         <i class="pi pi-sliders-h" style="font-size: 2rem"></i>
     </button>
-<div *ngIf="isOpen"><mat-card class="example-result-card m-1 max-w-sm pr-1 pl-7 
+
+
+<div *ngIf="isOpen" class="">
+  
+<mat-card class="example-result-card m-1 max-w-sm pr-1 pl-7 
   bg-white border 
   border-gray-200 
   rounded-lg 
-  shadow ">
-      
-  <mat-card-content >
+  shadow
+ 
+  ">
+  
+  
+
+<mat-card-content >
               
   <div class="example-label-container">
       <label id="example-name-label" class="example-name-label">Columnnas </label>
       <label class="example-value-label">{{slider.value}}</label>
-    </div>
-    <mat-slider
-        class="example-margin"
-        [disabled]="disabled"
-        [max]="max"
-        [min]="min"
-        [step]="step"
-        [discrete]="thumbLabel"
-        [showTickMarks]="showTicks">
-      <input matSliderThumb [(ngModel)]="value" (input)="onSliderChange(slider.value)"
+  </div>
+
+  <mat-slider
+      class="example-margin"
+      [disabled]="disabled"
+      [max]="max"
+      [min]="min"
+      [step]="step"
+      [discrete]="thumbLabel"
+      [showTickMarks]="showTicks">
+    <input matSliderThumb [(ngModel)]="value" (input)="onSliderChange(slider.value)"
+    
+    #slider>
+  </mat-slider>
+</mat-card-content>
+  
+  
+</mat-card>  
+
+  <div class="">
+
+    <!-- 
+      <button type="button" 
+        class="aceptar text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
+        focus:ring-4 focus:outline-none focus:ring-blue-300
+        dark:focus:ring-blue-800 font-medium rounded-lg 
+        text-sm px-5 py-2.5 text-center me-2 mb-2"(click)="confirmValue()">
+        Aceptar
+      </button>
       
-      #slider>
-    </mat-slider>
-  </mat-card-content>
-  
-  
-  </mat-card>  <button type="button" 
-  class="aceptar text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
-  focus:ring-4 focus:outline-none focus:ring-blue-300
-  dark:focus:ring-blue-800 font-medium rounded-lg 
-  text-sm px-5 py-2.5 text-center me-2 mb-2"(click)="confirmValue()">
-  Aceptar
-  </button>
-  
-  <button type="button" 
-  class="cancelar
-  text-white bg-gradient-to-br from-purple-800 to-blue-400 
-  hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300
-   dark:focus:ring-blue-800 
-  font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" (click)="cancelValueSelection()">
-  Cancelar
-  </button></div>
+      <button type="button" 
+      class="cancelar
+      text-white bg-gradient-to-br from-purple-800 to-blue-400 
+      hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300
+       dark:focus:ring-blue-800 
+      font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" (click)="cancelValueSelection()">
+      Cancelar
+      </button>
+ -->
+  </div>
+</div>
 
 </div>
 

@@ -16,3 +16,38 @@
     top: 140px;
     right: 0px;
   }
+
+
+  .btn-img {
+    position: relative;
+    top: 18rem; 
+    left: 0rem;  
+    
+  }
+
+.btn-color-config-ubicacion{
+  position: absolute;
+  top: 35rem; 
+  right: 0.5rem;  
+    
+}
+
+
+
+.card-btn {
+   
+  width: 5rem;
+  height: 10rem;
+/*   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  z-index: 10;
+  align-items: center;    
+  justify-content: center;
+  padding: 1.5rem;
+
+  position: absolute; 
+  top: auto; 
+  left: 70rem;
+  right:  2rem;
+  transform: translateX(90%)
+  
+}

@@ -61,10 +61,11 @@ export class ConfiguracionesAlbumComponent {
     this.titles = title;
   }
   openPicker() {
-    this.isOpen = true;
+    this.isOpen = !this.isOpen;
 
   }
 
+ 
   closePicker() {
     this.isOpen = false;
   }
